@@ -1,19 +1,23 @@
 #import "AppReview.h"
+#import <StoreKit/SKStoreReviewController.h>
 
 @implementation AppReview
 
+- (dispatch_queue_t)methodQueue
+{
+  return dispatch_get_main_queue();
+}
+
 RCT_EXPORT_MODULE()
 
-// Example method
-// See // https://facebook.github.io/react-native/docs/native-modules-ios
-RCT_REMAP_METHOD(multiply,
-                 multiplyWithA:(nonnull NSNumber*)a withB:(nonnull NSNumber*)b
-                 withResolver:(RCTPromiseResolveBlock)resolve
-                 withRejecter:(RCTPromiseRejectBlock)reject)
+RCT_EXPORT_METHOD(launch)
 {
-  NSNumber *result = @([a floatValue] * [b floatValue]);
+  [SKStoreReviewController requestReview];
+}
 
-  resolve(result);
++ (BOOL)requiresMainQueueSetup
+{
+  return YES;
 }
 
 @end
