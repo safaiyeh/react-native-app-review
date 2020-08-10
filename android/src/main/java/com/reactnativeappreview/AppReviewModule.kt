@@ -1,24 +1,29 @@
 package com.reactnativeappreview
 
+import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import com.facebook.react.bridge.Promise
+import com.google.android.play.core.review.ReviewManagerFactory
 
-class AppReviewModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
+class AppReviewModule(private val reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
 
-    override fun getName(): String {
+
+  override fun getName(): String {
         return "AppReview"
     }
 
     // Example method
     // See https://facebook.github.io/react-native/docs/native-modules-android
     @ReactMethod
-    fun multiply(a: Int, b: Int, promise: Promise) {
-    
-      promise.resolve(a * b)
-    
+    fun launch(promise: Promise) {
+      val manager = ReviewManagerFactory.create(reactContext);
+      val request = manager.requestReviewFlow();
+      request.addOnCompleteListener { requestStatus ->
+        if (requestStatus.isSuccessful) {
+          val reviewInfo = requestStatus.result
+          currentActivity?.let { manager.launchReviewFlow(it, reviewInfo) }
+        }
+      }
     }
-
-    
 }

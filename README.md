@@ -15,7 +15,7 @@ import AppReview from "react-native-app-review";
 
 // ...
 
-const result = await AppReview.multiply(3, 7);
+AppReview.launch();
 ```
 
 ## Contributing

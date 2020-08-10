@@ -1,7 +1,7 @@
 import { NativeModules } from 'react-native';
 
 type AppReviewType = {
-  multiply(a: number, b: number): Promise<number>;
+  launch(): void;
 };
 
 const { AppReview } = NativeModules;
