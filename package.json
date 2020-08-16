@@ -1,6 +1,6 @@
 {
   "name": "react-native-app-review",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "React Native module to request users to leave an app review.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
