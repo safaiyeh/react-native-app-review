@@ -11,7 +11,7 @@
     "src",
     "lib",
     "android",
-    "ios",
+    "apple",
     "cpp",
     "react-native-app-review.podspec",
     "!lib/typescript/example",
@@ -32,7 +32,12 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "macos",
+    "app review",
+    "in-app review",
+    "play store",
+    "app store"
   ],
   "repository": "https://github.com/safaiyeh/react-native-app-review",
   "author": "Jason Safaiyeh <safaiyeh@protonmail.com> (https://github.com/safaiyeh)",

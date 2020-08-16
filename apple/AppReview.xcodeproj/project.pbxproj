@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
-
-		5E555C0D2413F4C50049A1A2 /* AppReview.mm in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* AppReview.mm */; };
+		8FC18C0A24E7908A002FA732 /* AppReview.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC18C0924E7908A002FA732 /* AppReview.m */; };
+		8FC18C1A24E79342002FA732 /* AppReview.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC18C0924E7908A002FA732 /* AppReview.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -22,19 +21,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8FC18C1C24E79342002FA732 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libAppReview.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppReview.a; sourceTree = BUILT_PRODUCTS_DIR; };
-
-
+		8FC18C0924E7908A002FA732 /* AppReview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppReview.m; sourceTree = "<group>"; };
+		8FC18C2024E79342002FA732 /* libAppReview-macOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libAppReview-macOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E7B5881CC2AC0600A0062D /* AppReview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppReview.h; sourceTree = "<group>"; };
-		B3E7B5891CC2AC0600A0062D /* AppReview.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppReview.mm; sourceTree = "<group>"; };
-
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		58B511D81A9E6C8500147676 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FC18C1B24E79342002FA732 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -55,12 +68,10 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-
-
 				B3E7B5881CC2AC0600A0062D /* AppReview.h */,
-				B3E7B5891CC2AC0600A0062D /* AppReview.mm */,
-
+				8FC18C0924E7908A002FA732 /* AppReview.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				8FC18C2024E79342002FA732 /* libAppReview-macOS.a */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +93,23 @@
 			name = AppReview;
 			productName = RCTDataManager;
 			productReference = 134814201AA4EA6300B7C361 /* libAppReview.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		8FC18C1824E79342002FA732 /* AppReview-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FC18C1D24E79342002FA732 /* Build configuration list for PBXNativeTarget "AppReview-macOS" */;
+			buildPhases = (
+				8FC18C1924E79342002FA732 /* Sources */,
+				8FC18C1B24E79342002FA732 /* Frameworks */,
+				8FC18C1C24E79342002FA732 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AppReview-macOS";
+			productName = RCTDataManager;
+			productReference = 8FC18C2024E79342002FA732 /* libAppReview-macOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -112,6 +140,7 @@
 			projectRoot = "";
 			targets = (
 				58B511DA1A9E6C8500147676 /* AppReview */,
+				8FC18C1824E79342002FA732 /* AppReview-macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -121,10 +150,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
-
-				5E555C0D2413F4C50049A1A2 /* AppReview.mm in Sources */,
-
+				8FC18C0A24E7908A002FA732 /* AppReview.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FC18C1924E79342002FA732 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FC18C1A24E79342002FA732 /* AppReview.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +209,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -218,6 +253,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -237,7 +273,6 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = AppReview;
 				SKIP_INSTALL = YES;
-
 			};
 			name = Debug;
 		};
@@ -254,7 +289,40 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = AppReview;
 				SKIP_INSTALL = YES;
-
+			};
+			name = Release;
+		};
+		8FC18C1E24E79342002FA732 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../../React/**",
+					"$(SRCROOT)/../../react-native/React/**",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		8FC18C1F24E79342002FA732 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../../React/**",
+					"$(SRCROOT)/../../react-native/React/**",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -275,6 +343,15 @@
 			buildConfigurations = (
 				58B511F01A9E6C8500147676 /* Debug */,
 				58B511F11A9E6C8500147676 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FC18C1D24E79342002FA732 /* Build configuration list for PBXNativeTarget "AppReview-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FC18C1E24E79342002FA732 /* Debug */,
+				8FC18C1F24E79342002FA732 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
